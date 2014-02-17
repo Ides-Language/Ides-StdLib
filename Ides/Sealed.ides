@@ -1,0 +1,4 @@
+struct Sealed[This != Sealed] {
+    
+}
+

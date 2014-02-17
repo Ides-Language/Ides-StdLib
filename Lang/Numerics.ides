@@ -1,0 +1,14 @@
+
+trait Number {
+    
+}
+
+trait Int : Number {
+    
+}
+
+trait Float : Number {
+    
+}
+
+

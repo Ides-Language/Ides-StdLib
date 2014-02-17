@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+
+    "build_systems":
+    [
+        {
+            "name": "Idesc",
+            "cmd": [ "/usr/local/bin/idesc", "$project_path"]
+        }
+    ]
+}

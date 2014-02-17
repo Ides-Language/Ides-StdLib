@@ -1,0 +1,19 @@
+struct Any {
+	def ToString() : String;
+
+}
+
+class AnyRef {
+	def ToString() = "Object";
+}
+
+struct Box[T] : AnyRef, Sealed {
+	val ptr = malloc(T.size) as Ptr[T];
+	var ptr : test[X] = Ptr();
+
+}
+
+def New[T]() : Box[T] = {
+    
+}
+

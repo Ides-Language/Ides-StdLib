@@ -1,0 +1,23 @@
+trait Function[Ret, Args...] {
+	def call(args : Args) : Ret;
+}
+
+trait CFunction[Ret, Args...] : Function[Ret, Args...] {
+	def getPtr() : CPtr[void];
+}
+
+trait PartialFunction[Ret, Arg] : Function[Ret, Arg] {
+	def isDefined(arg : Arg) : bool;
+}
+
+class Lazy[T](func : Function[T]) : CoerceTo[T] {
+    implicit def this(f: Function[T]) = this(f);
+
+    def coerce() : T = value match {
+        case Some(v) => v
+        case None => { value = Some(func()); value.get(); }
+    }
+
+    private var value : Option[T];
+}
+

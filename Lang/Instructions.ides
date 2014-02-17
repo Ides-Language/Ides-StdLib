@@ -1,0 +1,20 @@
+
+mod Instructions {
+
+    unsafe public intrinsic def add(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def sub(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def mul(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def div(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def rem(lhs: int32, rhs: int32) : int32;
+
+    unsafe public intrinsic def shl(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def lshr(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def ashr(lhs: int32, rhs: int32) : int32;
+
+    unsafe public intrinsic def and(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def or(lhs: int32, rhs: int32) : int32;
+    unsafe public intrinsic def xor(lhs: int32, rhs: int32) : int32;
+
+    unsafe public intrinsic def bitcast[T, R](arg: T) : R;
+
+}

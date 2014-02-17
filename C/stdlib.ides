@@ -1,0 +1,3 @@
+unsafe public extern def malloc(size : uint64) : CPtr[Unit];
+
+unsafe public def malloc[T]() : CPtr[T] = Lang.Instructions.bitcast[T](malloc(T.size));

@@ -1,0 +1,4 @@
+trait Dynamic {
+	def call[Args...](method: String, args : Args) : Dynamic;
+}
+
